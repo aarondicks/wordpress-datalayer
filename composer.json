@@ -1,0 +1,21 @@
+{
+  "name": "aarondicks/wordpress-datalayer",
+  "description": "WordPress Plugin ",
+  "keywords": ["datalayer", "gtm", "tag", "manager", "tag manager"],
+  "homepage": "https://www.impression.co.uk/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Aaron Dicks",
+      "email": "aaron@impression.co.uk",
+      "homepage": "https://www.impression.co.uk/"
+    }
+  ],
+  "support": {
+    "email": "hello@impression.co.uk"
+  },
+  "type": "wordpress-plugin",
+  "autoload": {
+      "psr-4": { "WPDataLayer\\": "src/" }
+  }
+}
