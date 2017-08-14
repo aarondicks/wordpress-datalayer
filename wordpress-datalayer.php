@@ -67,7 +67,8 @@ class WPDataLayer {
     // post/page ID
     // post types
 
-    //$current_page = get_queried_object();
+
+    $vars = apply_filters('wpdatalayer_vars',$vars);
 
     $encoded_vars = json_encode($vars);
 
@@ -87,7 +88,8 @@ class WPDataLayer {
 
   public function fields_html() {
     $value = get_option('wmpdatalayer', 'dataLayer');
-    echo '<input type="text" id="wmpdatalayer" name="wmpdatalayer" value="' . $value . '" />';
+    echo '<input type="text" id="wmpdatalayer" name="wmpdatalayer" value="' . $value . '" class="regular-text" />';
+    echo '<p class="description" id="wmpdatalayer-description">This is the data layer variable name used by Google Tag Manager. Defaults to "dataLayer".</p>';
   }
 
 }
